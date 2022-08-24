@@ -1,8 +1,9 @@
-import logo from './logo.svg';
 import styled from "styled-components";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faBell } from "@fortawesome/free-regular-svg-icons";
-import { faMagnifyingGlass, faAlignJustify } from "@fortawesome/free-solid-svg-icons";
+import {Navbar, Container} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass, faAlignJustify, faBell } from "@fortawesome/free-solid-svg-icons";
+import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
 
 const StyledNav = styled.div`
@@ -28,12 +29,22 @@ const StyledContanier = styled.div`
   `;
 
 function App() {
+  const [menuShow, setMenuShow] = useState(false);
+
   return (
-    <div className="App">
+    <div className="App">      
       <StyledNav>
-        <FontAwesomeIcon icon={faMagnifyingGlass} style={{fontSize: "30px"}} onClick={{}}></FontAwesomeIcon>
-        <FontAwesomeIcon icon={faBell} style={{fontSize: "30px"}}></FontAwesomeIcon>
-        <FontAwesomeIcon icon={faAlignJustify} style={{fontSize: "30px"}}></FontAwesomeIcon>
+        <img
+        alt="pkselect"
+        src={logo}
+        width="50"
+        height="50"
+        className="d-inline-block align-top"
+      />{' '}
+        백경이
+        <FontAwesomeIcon icon={faMagnifyingGlass} style={{fontSize: "30px", color: "white"}}></FontAwesomeIcon>
+        <FontAwesomeIcon icon={faBell} style={{fontSize: "30px", color: "white"}}></FontAwesomeIcon>
+        <FontAwesomeIcon icon={faAlignJustify} style={{fontSize: "30px", color: "white"}} onClick={()=>{setMenuShow(!menuShow); console.log(menuShow)}}></FontAwesomeIcon>
       </StyledNav>
       <StyledAdv>
         <p>광고바</p>
@@ -41,7 +52,11 @@ function App() {
       <StyledContanier>
         Contanier
       </StyledContanier>
-      
+      {
+        menuShow ? <div>보여줘 너의 미래!!
+          대충 메뉴있는 곳
+        </div> : null
+      }
     </div>
   );
 }
