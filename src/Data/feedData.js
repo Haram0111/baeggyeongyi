@@ -1,0 +1,23 @@
+export default 
+    [
+        {   wirterImg: "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg",
+            wirter: "오하람",
+            title : "1번글",
+            text: "아아아아아악"},
+        {   wirterImg: "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg",
+            wirter: "오하람",
+            title : "2번글",
+            text: "아아아아아악"},
+        {   wirterImg: "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg",
+            wirter: "오하람",
+            title : "3번글",
+            text: "아아아아아악"},
+        {   wirterImg: "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg",
+            wirter: "오하람",
+            title : "4번글",
+            text: "아아아아아악"},
+        {   wirterImg: "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg",
+            wirter: "오하람",
+            title : "5번글",
+            text: "아아아아아악"},
+    ] 
