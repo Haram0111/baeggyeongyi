@@ -5,6 +5,7 @@ import { faMagnifyingGlass, faAlignJustify, faBell } from "@fortawesome/free-sol
 import logo from './logo.svg';
 import React, {useState} from 'react'
 import Alarm_data from "./Data/alarm";
+import Feed from "./Component/postingFeed";
 import './App.css';
 
 const StyledNav = styled.div`
@@ -86,7 +87,7 @@ function App() {
         <p>광고바</p>
       </StyledAdv>
       <StyledContanier>
-        Contanier
+        <Feed></Feed>
       </StyledContanier>
       {
         menuShow ? 
