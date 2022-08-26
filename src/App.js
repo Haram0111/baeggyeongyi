@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import {Navbar, Container} from 'react-bootstrap';
+import {Navbar, Container, Row , Button} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faAlignJustify, faBell } from "@fortawesome/free-solid-svg-icons";
 import logo from './logo.svg';
 import React, {useState} from 'react'
+import Alarm_data from "./Data/alarm";
 import './App.css';
 
 const StyledNav = styled.div`
@@ -28,8 +29,43 @@ const StyledContanier = styled.div`
   background-color: red;
   `;
 
+const StyledSidebar = styled.div`
+  float: right;
+  margin: 10px 0 0 0;
+  height: 1000px;
+  width: 20%;
+  background-color: grey;
+  z-index: 2;
+  `;
+
+const StyledHotPosting = styled.div`
+  margin: 20px auto 0;
+  height: 150px;
+  width: 91.3%;
+  background-color: black;
+  z-index: 2;
+  `;
+
+const StyledPageMove = styled.button`
+  margin: 10px 0 0;
+  height: 50px;
+  width: 30%;
+  background-color: white;
+  border-radius: 15px;
+  font-size: 20px;
+  `;
+
+const StyledAlarm = styled.div`
+  margin: 10px auto 0;
+  height: 600px;
+  width: 90%;
+  background-color: white;
+  border-radius: 15px;
+  `;
+
 function App() {
   const [menuShow, setMenuShow] = useState(false);
+  const [alarm, setAlarm] = useState(Alarm_data);
 
   return (
     <div className="App">      
@@ -53,11 +89,27 @@ function App() {
         Contanier
       </StyledContanier>
       {
-        menuShow ? <div>보여줘 너의 미래!!
-          대충 메뉴있는 곳
-        </div> : null
+        menuShow ? 
+        <StyledSidebar>
+          <StyledHotPosting>핫게 글</StyledHotPosting>
+          <>
+            <StyledPageMove>1</StyledPageMove>{' '}
+            <StyledPageMove>2</StyledPageMove>{' '}
+            <StyledPageMove>3</StyledPageMove>{' '}
+          </>
+          <StyledAlarm>
+            {
+              alarm && alarm.map((a,i)=>{
+                return(
+                  <div key={i}>{a.text}</div>
+                )
+              })
+            }
+          </StyledAlarm>
+        </StyledSidebar> : null
       }
     </div>
+    
   );
 }
 
