@@ -6,6 +6,8 @@ import logo from './logo.svg';
 import React, {useState} from 'react'
 import Alarm_data from "./Data/alarm";
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SettingBtn from "./Component/setting_btn";
 
 const StyledNav = styled.div`
   height: 150px;
@@ -68,7 +70,9 @@ function App() {
   const [alarm, setAlarm] = useState(Alarm_data);
 
   return (
-    <div className="App">      
+    <BrowserRouter>
+    <div className="App">
+      {/* nav바(고정)*/}
       <StyledNav>
         <img
         alt="pkselect"
@@ -82,34 +86,45 @@ function App() {
         <FontAwesomeIcon icon={faBell} style={{fontSize: "30px", color: "white"}}></FontAwesomeIcon>
         <FontAwesomeIcon icon={faAlignJustify} style={{fontSize: "30px", color: "white"}} onClick={()=>{setMenuShow(!menuShow); console.log(menuShow)}}></FontAwesomeIcon>
       </StyledNav>
-      <StyledAdv>
-        <p>광고바</p>
-      </StyledAdv>
-      <StyledContanier>
-        Contanier
-      </StyledContanier>
-      {
-        menuShow ? 
-        <StyledSidebar>
-          <StyledHotPosting>핫게 글</StyledHotPosting>
+
+      <Routes>
+        {/* main 페이지 */}
+        <Route path="" element = {
           <>
-            <StyledPageMove>1</StyledPageMove>{' '}
-            <StyledPageMove>2</StyledPageMove>{' '}
-            <StyledPageMove>3</StyledPageMove>{' '}
-          </>
-          <StyledAlarm>
-            {
-              alarm && alarm.map((a,i)=>{
-                return(
-                  <div key={i}>{a.text}</div>
-                )
-              })
-            }
-          </StyledAlarm>
-        </StyledSidebar> : null
-      }
+          <StyledAdv>
+          <p>광고바</p>
+          </StyledAdv>
+          <StyledContanier>
+          Contanier
+          </StyledContanier>
+          {
+            menuShow ? 
+            <StyledSidebar>
+              <StyledHotPosting>핫게 글</StyledHotPosting>
+              <>
+                <StyledPageMove>1</StyledPageMove>{' '}
+                <StyledPageMove>2</StyledPageMove>{' '}
+                <StyledPageMove>3</StyledPageMove>{' '}
+              </>
+              <StyledAlarm>
+                {
+                  alarm && alarm.map((a,i)=>{
+                    return(
+                      <div key={i}>{a.text}</div>
+                    )
+                  })
+                }
+              </StyledAlarm>
+            </StyledSidebar> : null
+          }</>
+          }>
+          </Route>
+
+          {/* 프로필 설정 모달창 */}
+          <Route path="/modalTest" element={<SettingBtn/>}></Route>
+      </Routes>
     </div>
-    
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,41 @@
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal {
+    width: 40%;
+    height: 50%;
+    background-color: black;
+    margin-top: -30px;
+}
+.banner {
+    max-width: 100%;
+    text-align: right;
+    height: 40px;
+    padding: 10px;
+}
+.close_btn {
+    display: inline-block;
+    color: #FFFFFF;
+    height: 40px;
+    width: 40px;
+    font-size: 26px;
+    border: 1px solid #FFFFFF;
+}
+.close_btn svg {
+    padding: 7px
+}
+.setting_content {
+    max-width: 100%;
+    height: calc(100% - 60px - 20px);
+    color: #FFFFFF;
+    padding: 10px;
+}
