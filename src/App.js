@@ -45,6 +45,7 @@ const StyledHotPosting = styled.div`
   width: 91.3%;
   background-color: black;
   z-index: 2;
+  color: white;
   `;
 
 const StyledPageMove = styled.button`
