@@ -1,16 +1,18 @@
 import styled from "styled-components";
+import PostingFeed from "./postingFeed";
 
-function Container() {
-    const StyledContanier = styled.div`
+const StyledContanier = styled.div`
     float: left;
     margin: 10px 0 0 10px;
     height: 500px;
     width: 50%;
     background-color: red;
     `;
+
+function Container() {
     return(
         <StyledContanier>
-          Contanier
+          <PostingFeed/>
         </StyledContanier>
     );
 }
