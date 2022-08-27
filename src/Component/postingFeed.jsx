@@ -19,7 +19,7 @@ function PostingFeed(){
                     return(
                         <>                            
                             <div><img src={a.wirterImg} style={{width: "30px", height: "30px"}}></img>{` `}{a.wirter}</div>
-                            <div>{a.title}</div>
+                            <div>{a.date}</div>
                             <div>{a.text}</div>
                         </>
                     )
