@@ -2,7 +2,8 @@ let personalData = [
     {
         myImg : '',
         myName : '',
-        myIntro : ''
+        myIntro : '',
+        myShow : false //익명 여부
     }
 ];
 
