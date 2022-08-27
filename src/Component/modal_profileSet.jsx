@@ -11,7 +11,7 @@ function ModalProfileSet(props) {
     }];
     let [myProfile, setMyProfile] = useState(data);
     let [saveMyProfile, setSaveMyProfile] = useState(personalData);
-    let [checking, setChecking] = useState(false);
+    let [checking, setChecking] = useState(props.showState);
 
     
     if (props.modalState == false) return(null);
@@ -33,7 +33,7 @@ function ModalProfileSet(props) {
                     }}/>
                     {/* 익명여부 */}
                     <span>익명</span>
-                    <input type='checkbox' onClick={()=>{
+                    <input type='checkbox' checked={checking} onClick={()=>{
                         if (checking == true) {setChecking(false)}
                         else {setChecking(true)}
                     }}></input>
@@ -51,7 +51,7 @@ function ModalProfileSet(props) {
                         copy.myIntro = myProfile.intro;
                         setSaveMyProfile(copy);
                         props.setModalState(false);
-                        props.setCheckState(checking);
+                        props.setShowState(checking);
                     }}>저장</span>
                 </div>
             </div>

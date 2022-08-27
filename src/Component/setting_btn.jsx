@@ -5,17 +5,17 @@ import personalData from "../Data/personalData";
 
 function SettingBtn() {
     let [modalState, setModalState] = useState(false);
-    let [checkState, setCheckState] = useState(false);
+    let [showState, setShowState] = useState(personalData.myShow);
     return(
         <>
             <span className="setting_btn" onClick={()=>{
                 setModalState(true);
             }}><VscSettingsGear/></span>
             <span style={{color:'black'}}>
-                {checkState==true ? '익명' : personalData.myName}
+                {showState==true ? '익명' : personalData.myName}
             </span>
             <span style={{color:'black'}}>{personalData.myIntro}</span>
-            <ModalProfileSet modalState={modalState} setModalState={setModalState} checkState={checkState} setCheckState={setCheckState}/>
+            <ModalProfileSet modalState={modalState} setModalState={setModalState} showState={showState} setShowState={setShowState}/>
         </>
     );
 }
