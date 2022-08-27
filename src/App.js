@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styled from "styled-components";
 import {Navbar, Container, Row , Button} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,8 +7,16 @@ import logo from './logo.svg';
 import React, {useState} from 'react'
 import Alarm_data from "./Data/alarm";
 import Feed from "./Component/postingFeed";
+=======
+import React from 'react';
+>>>>>>> ffa62d0a1edfbd2d5334819b0d2ea830f98dd47a
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SettingBtn from "./Component/setting_btn";
+import Navi_Top from './Component/navi_top';
+import Main from './page/main_page';
 
+<<<<<<< HEAD
 const StyledNav = styled.div`
   height: 150px;
   width: 100%;
@@ -64,12 +73,12 @@ const StyledAlarm = styled.div`
   background-color: white;
   border-radius: 15px;
   `;
+=======
+>>>>>>> ffa62d0a1edfbd2d5334819b0d2ea830f98dd47a
 
 function App() {
-  const [menuShow, setMenuShow] = useState(false);
-  const [alarm, setAlarm] = useState(Alarm_data);
-
   return (
+<<<<<<< HEAD
     <div className="App">      
       <StyledNav>
         <img
@@ -110,8 +119,19 @@ function App() {
           </StyledAlarm>
         </StyledSidebar> : null
       }
+=======
+    <BrowserRouter>
+    <div className="App">
+      <Navi_Top/>
+      <Routes>
+        <Route path='/' element={<Main/>}/>
+
+       {/* 프로필 설정 모달창 - test임 확정 x*/}
+        <Route path="/modalTest" element={<SettingBtn/>}/>
+      </Routes>
+>>>>>>> ffa62d0a1edfbd2d5334819b0d2ea830f98dd47a
     </div>
-    
+    </BrowserRouter>
   );
 }
 
