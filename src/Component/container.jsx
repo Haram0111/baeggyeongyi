@@ -10,7 +10,7 @@ function Container() {
     `;
     return(
         <StyledContanier>
-          Contanier
+            Contanier
         </StyledContanier>
     );
 }
