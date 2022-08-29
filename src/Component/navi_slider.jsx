@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Alarm_data from "../Data/alarm";
 import { useState } from "react";
+import HotPosing from './hotPosting';
 
 function Navi_Slider(props) {
     const [alarm, setAlarm] = useState(Alarm_data);
@@ -11,14 +12,6 @@ function Navi_Slider(props) {
     height: 1000px;
     width: 20%;
     background-color: grey;
-    z-index: 2;
-    `;
-
-    const StyledHotPosting = styled.div`
-    margin: 20px auto 0;
-    height: 150px;
-    width: 91.3%;
-    background-color: black;
     z-index: 2;
     `;
 
@@ -40,7 +33,7 @@ function Navi_Slider(props) {
     `;
     if (props.menuShow) {return(
         <StyledSidebar>
-              <StyledHotPosting>핫게 글</StyledHotPosting>
+              <HotPosing></HotPosing>
               <>
                 <StyledPageMove>1</StyledPageMove>{' '}
                 <StyledPageMove>2</StyledPageMove>{' '}
