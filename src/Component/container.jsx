@@ -12,6 +12,7 @@ const StyledContanier = styled.div`
 function Container() {
     return(
         <StyledContanier>
+            Contanier
           <PostingFeed/>
         </StyledContanier>
     );
