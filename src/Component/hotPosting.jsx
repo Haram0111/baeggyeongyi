@@ -8,11 +8,6 @@ const StyledHotPosting = styled.div`
     width: 91.3%;
     background-color: black;
     `;
-const StyledInner = styled.Slider`
-    width: 100%;
-    height: auto;
-    display: inline-block;
-`;
 
 function HotPosting(){
 
