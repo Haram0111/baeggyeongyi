@@ -17,14 +17,15 @@ function Navi_Top() {
     return(
         <>
         <StyledNav>
-            <img
-                alt="pkselect"
-                src={logo}
-                width="50"
-                height="50"
-                className="d-inline-block align-top"
-            />{' '}
-                백경이
+            <span onClick={()=>{window.location.href='/'}}>
+                <img
+                    alt="pkselect"
+                    src={logo}
+                    width="50"
+                    height="50"
+                    className="d-inline-block align-top"
+                />{' '}
+                    백경이</span>
                 <FontAwesomeIcon icon={faMagnifyingGlass} style={{fontSize: "30px", color: "white"}}></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faBell} style={{fontSize: "30px", color: "white"}}></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faAlignJustify} style={{fontSize: "30px", color: "white"}}
