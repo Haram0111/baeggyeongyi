@@ -12,6 +12,7 @@ function App() {
       <Navi_Top/>
       <Routes>
         <Route path='/' element={<Main/>}/>
+        <Route path='/:id' element={<Main/>}/>
        {/* 프로필 설정 모달창 - test임 확정 x*/}
         <Route path="/modalTest" element={<SettingBtn/>}/>
       </Routes>
