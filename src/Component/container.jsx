@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PostingFeed from "./postingFeed";
 
 function Container() {
     const StyledContanier = styled.div`
@@ -10,7 +11,7 @@ function Container() {
     `;
     return(
         <StyledContanier>
-            Contanier
+            <PostingFeed></PostingFeed>
         </StyledContanier>
     );
 }
