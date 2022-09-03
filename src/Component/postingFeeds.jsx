@@ -6,7 +6,7 @@ import { faPaperPlane, faComments, faThumbsUp } from '@fortawesome/free-solid-sv
 
 
 
-function PostingFeed(){
+function PostingFeeds(){
     const [feed, setFeed] = useState(feedData);
     const navigate = useNavigate();
 
@@ -31,4 +31,4 @@ function PostingFeed(){
     )
 }
 
-export default PostingFeed;
+export default PostingFeeds;
